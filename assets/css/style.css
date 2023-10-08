@@ -1,3 +1,14 @@
+:root {
+  --dark-blue: rgb(26, 47, 65);
+  --med-blue: rgb(70, 125, 138);
+  --light-blue: rgb(119, 170, 169);
+  --pink: rgb(237, 161, 175);
+  --orange: rgb(243, 154, 94);
+  --yellow: rgb(250, 200, 130);
+  --red: rgb(167, 54, 74); 
+  --alpha: 0.7;
+}
+
 * {
   box-sizing: border-box;
 }
