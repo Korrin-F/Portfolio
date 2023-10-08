@@ -8,7 +8,7 @@
   --red: rgb(167, 54, 74); 
   --alpha: 0.7;
   --text-padding: 0.5rem;
-  --page-right: 10%;
+  --page-space: 5vw;
   
 }
 
@@ -48,7 +48,7 @@ header {
   background-color: var(--dark-blue);
   height: max-content;
   align-items: center;
-  padding-right: var(--page-right);
+  padding-right: var(--page-space);
 }
 header h1 {
   font-size: 2.5rem;
@@ -56,7 +56,7 @@ header h1 {
   color: var(--dark-blue);
   background-color: var(--pink);
   margin: 0.6rem 0;
-  padding: 0rem 1rem 0rem 3rem;
+  padding: 0rem 1rem 0rem var(--page-space);
 }
 /* header nav {
   flex-grow: 1;
@@ -92,7 +92,7 @@ header a {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-right: var(--page-right);
+  padding-right: var(--page-space);
   height: 150px;
   background-image: url("../images/banner2.jpg");
   background-size:auto 200% ;
