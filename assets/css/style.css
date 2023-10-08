@@ -1,3 +1,6 @@
+/* website has been designed for computer screens first 
+then simplified down to mobile screens using media queries */
+
 :root {
   --dark-blue: rgb(26, 47, 65);
   --med-blue: rgb(70, 125, 138);
@@ -9,7 +12,7 @@
   --alpha: 0.7;
   --text-padding: 0.5rem;
   --page-space: 5vw;
-  
+  --border-style: 0.3rem solid;
 }
 
 * {
@@ -38,6 +41,11 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.list-cont {
+  display: flex;
+  list-style: none;
 }
 
 /* ------- HEADER + NAV ------- */
@@ -71,7 +79,7 @@ header li {
   list-style: none;
   margin: 0 10px;
   padding-inline: var(--text-padding);
-  border-bottom: 0.3rem solid var(--pink);
+  border-bottom: var(--border-style) var(--pink);
 }
 header a {
   color: var(--pink);
@@ -114,3 +122,35 @@ header a {
   color: var(--dark-blue);
 
 }
+
+/* ------- MAIN GRID ------- */
+.page-wrapper {
+  display: grid;
+  grid-template: 
+  "about about-text ." max-content
+  "work work-grid ." max-content
+  "contact contacts-cont ." max-content
+  / 1fr 3fr var(--page-space);
+  gap: 2rem;
+  place-items: start end;
+}
+#about {
+  grid-area: about;
+}
+#about-text {
+  grid-area: about-text;
+}
+#work {
+  grid-area: work;
+}
+#contact{
+  grid-area: contact;
+}
+#contacts-cont {
+  grid-area: contacts;
+}
+
+#work-grid {
+  grid-area: work-grid;
+}
+
