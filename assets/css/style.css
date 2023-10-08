@@ -8,6 +8,7 @@
   --red: rgb(167, 54, 74); 
   --alpha: 0.7;
   --text-padding: 0.5rem;
+  --page-right: 10%;
   
 }
 
@@ -39,6 +40,7 @@ a {
   text-decoration: none;
 }
 
+/* ------- HEADER + NAV ------- */
 header {
   display: flex;
   width: 100%;
@@ -46,6 +48,7 @@ header {
   background-color: var(--dark-blue);
   height: max-content;
   align-items: center;
+  padding-right: var(--page-right);
 }
 header h1 {
   font-size: 2.5rem;
@@ -53,7 +56,7 @@ header h1 {
   color: var(--dark-blue);
   background-color: var(--pink);
   margin: 0.6rem 0;
-  padding: 0rem 1rem 0rem 3rem;;
+  padding: 0rem 1rem 0rem 3rem;
 }
 header nav {
   flex-grow: 1;
@@ -62,7 +65,7 @@ header nav ul {
   display: flex;
   justify-content: end;
   width: auto;
-  margin-right: 10%;
+ 
 }
 
 header li {
@@ -75,4 +78,27 @@ header li {
 header a {
   color: var(--pink);
   font-size: 1.5rem;
+}
+
+/* ------- HERO ------- */
+.hero-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: var(--page-right);
+  height: 150px;
+}
+.hero-banner div {
+  display: flex;
+  height: 50%;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem 0;
+  background-color: var(--dark-blue);
+}
+
+.logo {
+  height: 100%;
 }
