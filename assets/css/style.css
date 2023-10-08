@@ -100,11 +100,17 @@ header a {
 }
 .hero-banner div {
   display: flex;
-  height: 50%;
-  width: 200px;
+  height: max-content;
+  width: max-content;
   align-items: center;
   justify-content: center;
   margin: 0 0 1rem 0;
-  padding: 0.5rem 0;
+  padding: 0 var(--text-padding) ;
   background-color: var(--pink);
+}
+
+.hero-banner h2 {
+  font-size: 2rem;
+  color: var(--dark-blue);
+
 }
