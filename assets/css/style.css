@@ -87,11 +87,14 @@ header a {
   align-items: flex-end;
   padding-right: var(--page-right);
   height: 150px;
+  background-image: url("../images/banner2.jpg");
+  background-size:auto 200% ;
+  background-position: center;
 }
 .hero-banner div {
   display: flex;
   height: 50%;
-  width: 15%;
+  width: 200px;
   align-items: center;
   justify-content: center;
   margin: 0 0 1rem 0;
