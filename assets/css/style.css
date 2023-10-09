@@ -11,22 +11,22 @@ then simplified down to mobile screens using media queries */
   --red: rgb(167, 54, 74); 
   --alpha: 0.7;
   --text-padding: 0.5rem;
+  --column-padding: 0.5rem;
   --page-space: 5vw;
   --border-style: 0.3rem solid;
   --place-column-items: start start;
 }
 
+/* ------ GLOBAL STYLING ------ */
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
-
 h1,
 h2,
 h3,
@@ -34,17 +34,15 @@ h4,
 h5,
 h6 {
   margin: 0;
-}
-
-h2 {
-  font-size: 2rem;
   color: var(--dark-blue);
 }
-
+h2 {
+  font-size: 2rem;
+}
 p {
   margin: 0;
+  color: var(--dark-blue);
 }
-
 a {
   text-decoration: none;
   font-size: 1.2rem;
@@ -74,7 +72,6 @@ header {
 header h1 {
   font-size: 2.5rem;
   text-align: right;
-  color: var(--dark-blue);
   background-color: var(--pink);
   margin: 0.6rem 0;
   padding: 0rem 1rem 0rem var(--page-space);
@@ -122,8 +119,6 @@ header a {
   background-color: var(--pink);
 }
 
-
-
 /* ------- MAIN GRID ------- */
 .page-wrapper {
   display: grid;
@@ -131,10 +126,11 @@ header a {
   "about about-text ." max-content
   "work work-grid ." max-content
   "contact contacts-cont ." max-content
-  / 1fr 3fr var(--page-space);
+  / 1fr 4fr var(--page-space);
   gap: 2rem;
   place-items: start end;
-  margin: 1.5rem 0;
+  margin: 1.5rem  0;
+  margin-right: -2rem; /* to compensate for 2nd column gap displacing the right side */
 }
 #about {
   grid-area: about;
@@ -142,6 +138,7 @@ header a {
 #about-text {
   grid-area: about-text;
   place-self: var(--place-column-items);
+  padding: var(--column-padding) 0;
 }
 #work {
   grid-area: work;
@@ -154,6 +151,16 @@ header a {
   place-self: var(--place-column-items);
   width:100%;
 }
+/* ----- MAIN GRID Styling ------ */
+.section-header {
+  padding: 0 1rem 0 3rem;
+  border-right: var(--border-style) var(--dark-blue);
+  text-align: right;
+  height: 100%;
+}
+.section-header h2 {
+  font-size: 2.5rem;
+}
 .list-cont li {
   border-bottom: var(--border-style) var(--med-blue);
 }
@@ -161,7 +168,7 @@ header a {
   color: var(--med-blue);
 }
 
-/* ---- Nested Grid for Projects --- */
+/* ---- NESTED GRID for Projects --- */
 #work-grid {
   grid-area: work-grid;
   display: grid;
@@ -171,10 +178,9 @@ header a {
   "work-three work-four" 1fr
   / 1fr 1fr;
   gap: 1rem;
-  /* place-content: start start; */
   place-self: var(--place-column-items);
   width: 100%;
-  
+  padding: var(--column-padding) 0;
 }
 #work-main {
   grid-area: work-main;
@@ -192,12 +198,7 @@ header a {
   grid-area: work-four;
 }
 
-.section-header {
-  padding-right: 1rem;
-  border-right: var(--border-style) var(--dark-blue);
-  text-align: right;
-  height: 100%;
-}
+/* ----- NESTED GRID STYLING ------ */
 .work-cont {
   border: var(--border-style) var(--pink);
   display: flex;
