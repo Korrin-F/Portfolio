@@ -123,7 +123,7 @@ header a {
 .page-wrapper {
   display: grid;
   grid-template: 
-  "about about-text ." max-content
+  "about about-cont ." max-content
   "work work-grid ." max-content
   "contact contacts-cont ." max-content
   / 1fr 4fr var(--page-space);
@@ -135,10 +135,11 @@ header a {
 #about {
   grid-area: about;
 }
-#about-text {
-  grid-area: about-text;
+#about-cont {
+  grid-area: about-cont;
   place-self: var(--place-column-items);
   padding: var(--column-padding) 0;
+  display: flex;
 }
 #work {
   grid-area: work;
@@ -149,7 +150,7 @@ header a {
 #contacts-cont {
   grid-area: contacts-cont;
   place-self: var(--place-column-items);
-  width:100%;
+  width: 100%;
 }
 /* ----- MAIN GRID Styling ------ */
 .section-header {
@@ -166,6 +167,18 @@ header a {
 }
 .list-cont a {
   color: var(--med-blue);
+}
+#avatar {
+  order: -1;
+  margin-right: 1rem; 
+  border: var(--border-style) var(--pink);
+  max-width: 200px;
+  max-height: 200px;
+  flex-shrink: 0;
+}
+#about-text {
+  align-self: center;
+  flex-grow: 1;
 }
 
 /* ---- NESTED GRID for Projects --- */
