@@ -13,6 +13,7 @@ then simplified down to mobile screens using media queries */
   --text-padding: 0.5rem;
   --page-space: 5vw;
   --border-style: 0.3rem solid;
+  --place-column-items: start start;
 }
 
 * {
@@ -133,13 +134,14 @@ header a {
   / 1fr 3fr var(--page-space);
   gap: 2rem;
   place-items: start end;
+  margin: 1.5rem 0;
 }
 #about {
   grid-area: about;
 }
 #about-text {
   grid-area: about-text;
-  place-self: start start;
+  place-self: var(--place-column-items);
 }
 #work {
   grid-area: work;
@@ -149,7 +151,7 @@ header a {
 }
 #contacts-cont {
   grid-area: contacts-cont;
-  place-self: start start;
+  place-self: var(--place-column-items);
   width:100%;
 }
 .list-cont li {
@@ -157,7 +159,6 @@ header a {
 }
 .list-cont a {
   color: var(--med-blue);
-  /* font-size: 1rem; */
 }
 
 /* ---- Nested Grid for Projects --- */
@@ -171,7 +172,7 @@ header a {
   / 1fr 1fr;
   gap: 1rem;
   /* place-content: start start; */
-  place-self: start start;
+  place-self: var(--place-column-items);
   width: 100%;
   
 }
@@ -189,4 +190,11 @@ header a {
 }
 #work-four {
   grid-area: work-four;
+}
+
+.section-header {
+  padding-right: 1rem;
+  border-right: var(--border-style) var(--dark-blue);
+  text-align: right;
+  height: 100%;
 }
