@@ -7,9 +7,9 @@ then simplified down to mobile screens using media queries */
   --light-blue: rgb(119, 170, 169);
   --pink: rgb(237, 161, 175);
   --orange: rgb(243, 154, 94);
-  --yellow: rgb(250, 200, 130);
+  --yellow: 250, 200, 130;
   --red: rgb(167, 54, 74); 
-  --alpha: 0.7;
+  --alpha: 0.3;
   --text-padding: 0.5rem;
   --column-padding: 0.5rem;
   --page-space: 5vw;
@@ -39,9 +39,13 @@ h6 {
 h2 {
   font-size: 2rem;
 }
+h3 {
+  font-size: 1.5rem;
+}
 p {
   margin: 0;
   color: var(--dark-blue);
+  font-size: 1rem;
 }
 a {
   text-decoration: none;
@@ -175,6 +179,7 @@ header a {
   max-width: 200px;
   max-height: 200px;
   flex-shrink: 0;
+  background-color: rgb(var(--yellow));
 }
 #about-text {
   align-self: center;
@@ -186,7 +191,7 @@ header a {
   grid-area: work-grid;
   display: grid;
   grid-template: 
-  "work-main work-main" 2fr
+  "work-main work-main" 3fr
   "work-one work-two" 1fr
   "work-three work-four" 1fr
   / 1fr 1fr;
@@ -197,6 +202,11 @@ header a {
 }
 #work-main {
   grid-area: work-main;
+  background-image: url("../images/work-portfolio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
 }
 #work-one {
   grid-area: work-one;
@@ -223,5 +233,18 @@ header a {
   padding: 0.3rem 1rem;
   margin-bottom: 1rem;
   text-align: left;
+  z-index: 2;
 }
+
+#work-main:hover::before { /* creates a semi-transparent overlay on top of the background image */
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--yellow), var(--alpha)); 
+  z-index: 1; 
+}
+
 
