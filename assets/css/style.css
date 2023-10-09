@@ -198,3 +198,16 @@ header a {
   text-align: right;
   height: 100%;
 }
+.work-cont {
+  border: var(--border-style) var(--pink);
+  display: flex;
+  align-items: flex-end;
+}
+.work-text {
+  background-color: var(--pink);
+  width: max-content;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
