@@ -35,18 +35,30 @@ h6 {
   margin: 0;
 }
 
+h2 {
+  font-size: 2rem;
+  color: var(--dark-blue);
+}
+
 p {
   margin: 0;
 }
 
 a {
   text-decoration: none;
+  font-size: 1.2rem;
 }
-
-.list-cont {
+li {
+  list-style: none;
+  margin: 0 10px;
+  padding-inline: var(--text-padding);
+}
+.list-cont { /* list containter */
   display: flex;
   list-style: none;
+  justify-content: space-evenly;
 }
+
 
 /* ------- HEADER + NAV ------- */
 header {
@@ -66,9 +78,6 @@ header h1 {
   margin: 0.6rem 0;
   padding: 0rem 1rem 0rem var(--page-space);
 }
-/* header nav {
-  flex-grow: 1;
-} */
 header nav ul {
   display: flex;
   justify-content: end;
@@ -76,20 +85,15 @@ header nav ul {
   padding-left: 0px;
 }
 header li {
-  list-style: none;
-  margin: 0 10px;
-  padding-inline: var(--text-padding);
   border-bottom: var(--border-style) var(--pink);
 }
 header a {
   color: var(--pink);
-  font-size: 1.5rem;
 }
 .logo-cont {
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  
 }
 .logo {
   height: 50px;
@@ -117,11 +121,7 @@ header a {
   background-color: var(--pink);
 }
 
-.hero-banner h2 {
-  font-size: 2rem;
-  color: var(--dark-blue);
 
-}
 
 /* ------- MAIN GRID ------- */
 .page-wrapper {
@@ -139,6 +139,7 @@ header a {
 }
 #about-text {
   grid-area: about-text;
+  place-self: start start;
 }
 #work {
   grid-area: work;
@@ -147,10 +148,45 @@ header a {
   grid-area: contact;
 }
 #contacts-cont {
-  grid-area: contacts;
+  grid-area: contacts-cont;
+  place-self: start start;
+  width:100%;
+}
+.list-cont li {
+  border-bottom: var(--border-style) var(--med-blue);
+}
+.list-cont a {
+  color: var(--med-blue);
+  /* font-size: 1rem; */
 }
 
+/* ---- Nested Grid for Projects --- */
 #work-grid {
   grid-area: work-grid;
+  display: grid;
+  grid-template: 
+  "work-main work-main" 2fr
+  "work-one work-two" 1fr
+  "work-three work-four" 1fr
+  / 1fr 1fr;
+  gap: 1rem;
+  /* place-content: start start; */
+  place-self: start start;
+  width: 100%;
+  
 }
-
+#work-main {
+  grid-area: work-main;
+}
+#work-one {
+  grid-area: work-one;
+}
+#work-two {
+  grid-area: work-two;
+}
+#work-three {
+  grid-area: work-three;
+}
+#work-four {
+  grid-area: work-four;
+}
