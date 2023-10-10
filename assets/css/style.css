@@ -14,6 +14,8 @@ then simplified down to mobile screens using media queries */
   --column-padding: 0.5rem;
   --page-space: 5vw;
   --border-style: 0.3rem solid;
+  --med-border-style: 0.2rem solid;
+  --small-border-style: 0.1rem solid;
   --place-column-items: start start;
 }
 
@@ -288,3 +290,34 @@ header a {
 }
 
 
+@media only screen and (max-width: 900px) {
+  .logo-cont {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  header h1 {
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+  }
+  header nav ul {
+    justify-content: center;
+    margin: 0.75rem 0 .5rem 0;
+  }
+  header li {
+    border-bottom: var(--med-border-style) var(--pink);
+  }
+  a {
+    font-size: 1rem;
+  }
+  
+}
