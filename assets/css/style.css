@@ -154,7 +154,7 @@ header a {
   grid-area: about-cont;
   place-self: var(--place-column-items);
   padding: var(--column-padding) 0;
-  display: flex;
+  /* display: flex; */
 }
 #work {
   grid-area: work;
@@ -168,6 +168,7 @@ header a {
   width: 100%;
 }
 /* ----- MAIN GRID Styling ------ */
+
 .section-header {
   padding: 0 1rem 0 3rem;
   border-right: var(--border-style) var(--dark-blue);
@@ -191,7 +192,8 @@ header a {
   color: rgb(var(--yellow));
 }
 #avatar {
-  order: -1;
+  /* order: -1; */
+  float: left;
   margin-right: 1rem; 
   border: var(--border-style) var(--pink);
   max-width: 200px;
@@ -319,5 +321,7 @@ header a {
   a {
     font-size: 1rem;
   }
-  
+  h2 {
+    font-size: 1.5rem;
+  }
 }
