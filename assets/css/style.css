@@ -51,10 +51,16 @@ a {
   text-decoration: none;
   font-size: 1.2rem;
 }
+a:hover {
+  color: rgb(var(--yellow));
+}
 li {
   list-style: none;
   margin: 0 10px;
   padding-inline: var(--text-padding);
+}
+li:hover {
+  border-bottom: var(--border-style) rgb(var(--yellow)); 
 }
 .list-cont { /* list containter */
   display: flex;
@@ -170,8 +176,14 @@ header a {
 .list-cont li {
   border-bottom: var(--border-style) var(--med-blue);
 }
+.list-cont li:hover {
+  border-bottom: var(--border-style) rgb(var(--yellow));
+}
 .list-cont a {
   color: var(--med-blue);
+}
+.list-cont a:hover {
+  color: rgb(var(--yellow));
 }
 #avatar {
   order: -1;
@@ -230,6 +242,10 @@ header a {
 }
 #work-four {
   grid-area: work-four;
+  background-image: url("../images/work-blackjack.jpg");
+  background-size: contain;
+  background-size: auto 100%;
+  background-position: center;
 }
 
 /* ----- NESTED GRID STYLING ------ */
@@ -256,7 +272,8 @@ header a {
 #work-main:hover::before,
 #work-one:hover::before,
 #work-two:hover::before,
-#work-three:hover::before { /* creates a semi-transparent overlay on top of the background image */
+#work-three:hover::before,
+#work-four:hover::before { /* creates a semi-transparent overlay on top of the background image */
   content: ""; 
   position: absolute; 
   top: 0;
