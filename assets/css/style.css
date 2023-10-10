@@ -210,9 +210,9 @@ header a {
 }
 #work-one {
   grid-area: work-one;
-  background-image: url("../images/work-refactor.png");
+  background-image: url("../images/work-refactor.jpg");
   background-size: contain;
-  background-size: auto 150%;
+  background-size: auto 200%;
   background-position: center;
   background-repeat: repeat-x;
 }
