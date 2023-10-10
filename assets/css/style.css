@@ -66,6 +66,8 @@ li:hover {
   display: flex;
   list-style: none;
   justify-content: space-evenly;
+  padding-left: 0;
+  width: 50%;
 }
 
 
@@ -175,6 +177,7 @@ header a {
 }
 .list-cont li {
   border-bottom: var(--border-style) var(--med-blue);
+  margin: 0 1rem;
 }
 .list-cont li:hover {
   border-bottom: var(--border-style) rgb(var(--yellow));
