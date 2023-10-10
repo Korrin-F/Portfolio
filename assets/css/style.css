@@ -108,9 +108,10 @@ header a {
   align-items: flex-end;
   padding-right: var(--page-space);
   height: 150px;
-  background-image: url("../images/banner2.jpg");
-  background-size:auto 200% ;
-  background-position: center;
+  background-image: url("../images/banner1@0.5x.jpg");
+  background-size: auto 200% ;
+  background-position: top;
+  background-repeat: repeat-x;
 }
 .hero-banner div {
   display: flex;
@@ -213,6 +214,9 @@ header a {
   background-image: url("../images/work-refactor.png");
   background-size: contain;
   position: relative;
+  background-size: auto 150%;
+  background-position: center;
+  background-repeat: repeat-x;
 }
 #work-two {
   grid-area: work-two;
