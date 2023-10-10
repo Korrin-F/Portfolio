@@ -166,6 +166,9 @@ header a {
   grid-area: contacts-cont;
   place-self: var(--place-column-items);
   width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 /* ----- MAIN GRID Styling ------ */
 
@@ -290,7 +293,7 @@ header a {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   .logo-cont {
     display: none;
   }
@@ -300,7 +303,7 @@ header a {
     padding: 0;
   }
   header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -311,22 +314,31 @@ header a {
   }
   header nav ul {
     justify-content: center;
-    margin: 0.75rem 0 .5rem 0;
+    margin: 0.9rem 0 .75rem 0;
   }
   header li {
     border-bottom: var(--med-border-style) var(--pink);
   }
+  header li:hover {
+    border-bottom: var(--med-border-style) rgb(var(--yellow));
+  }
   a {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   h2 {
     font-size: 1.5rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+  .list-cont li {
+    border-bottom: var(--med-border-style) var(--med-blue);
+  }
+  .list-cont li:hover {
+    border-bottom: var(--med-border-style) rgb(var(--yellow));
   }
   .page-wrapper {
     display: flex;
@@ -347,4 +359,10 @@ header a {
     justify-content: center;
   }
 
+}
+
+@media only screen and (max-width: 414px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
 }
