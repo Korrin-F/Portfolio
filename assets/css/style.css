@@ -192,7 +192,6 @@ header a {
   color: rgb(var(--yellow));
 }
 #avatar {
-  /* order: -1; */
   float: left;
   margin-right: 1rem; 
   border: var(--border-style) var(--pink);
@@ -203,7 +202,6 @@ header a {
 }
 #about-text {
   align-self: center;
-  flex-grow: 1;
 }
 
 /* ---- NESTED GRID for Projects --- */
@@ -324,4 +322,29 @@ header a {
   h2 {
     font-size: 1.5rem;
   }
+  h3 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 5vw;
+    gap: 1rem;
+  }
+  .section-header {
+    border-right: none;
+    border-bottom: var(--med-border-style) var(--dark-blue);
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  #contacts-cont {
+    display: flex;
+    justify-content: center;
+  }
+
 }
