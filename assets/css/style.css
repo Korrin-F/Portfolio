@@ -224,6 +224,9 @@ header a {
 }
 #work-three {
   grid-area: work-three;
+  background-image: url("../images/work-mud.jpg");
+  background-size: cover;
+  background-position: center;
 }
 #work-four {
   grid-area: work-four;
@@ -252,7 +255,8 @@ header a {
 }
 #work-main:hover::before,
 #work-one:hover::before,
-#work-two:hover::before { /* creates a semi-transparent overlay on top of the background image */
+#work-two:hover::before,
+#work-three:hover::before { /* creates a semi-transparent overlay on top of the background image */
   content: ""; 
   position: absolute; 
   top: 0;
