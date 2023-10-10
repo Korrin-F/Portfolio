@@ -114,7 +114,7 @@ header a {
   align-items: flex-end;
   padding-right: var(--page-space);
   height: 150px;
-  background-image: url("../images/banner1@0.5x.jpg");
+  background-image: url("../images/banner1.jpg");
   background-size: auto 200% ;
   background-position: top;
   background-repeat: repeat-x;
