@@ -14,6 +14,8 @@ then simplified down to mobile screens using media queries */
   --column-padding: 0.5rem;
   --page-space: 5vw;
   --border-style: 0.3rem solid;
+  --med-border-style: 0.2rem solid;
+  --small-border-style: 0.1rem solid;
   --place-column-items: start start;
 }
 
@@ -152,7 +154,7 @@ header a {
   grid-area: about-cont;
   place-self: var(--place-column-items);
   padding: var(--column-padding) 0;
-  display: flex;
+  /* display: flex; */
 }
 #work {
   grid-area: work;
@@ -164,8 +166,12 @@ header a {
   grid-area: contacts-cont;
   place-self: var(--place-column-items);
   width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 /* ----- MAIN GRID Styling ------ */
+
 .section-header {
   padding: 0 1rem 0 3rem;
   border-right: var(--border-style) var(--dark-blue);
@@ -189,7 +195,7 @@ header a {
   color: rgb(var(--yellow));
 }
 #avatar {
-  order: -1;
+  float: left;
   margin-right: 1rem; 
   border: var(--border-style) var(--pink);
   max-width: 200px;
@@ -199,7 +205,6 @@ header a {
 }
 #about-text {
   align-self: center;
-  flex-grow: 1;
 }
 
 /* ---- NESTED GRID for Projects --- */
@@ -287,4 +292,180 @@ header a {
   z-index: 1; 
 }
 
+/* ------- Small Computer and iPad ------- */
+@media only screen and (max-width: 1024px) {
+  .logo-cont {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  header h1 {
+    font-size: 3.5rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+  }
+  header nav ul {
+    justify-content: center;
+    margin: 0.9rem 0 .75rem 0;
+  }
+  header li {
+    border-bottom: var(--med-border-style) var(--pink);
+  }
+  header li:hover {
+    border-bottom: var(--med-border-style) rgb(var(--yellow));
+  }
+  a {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .list-cont li {
+    border-bottom: var(--med-border-style) var(--med-blue);
+  }
+  .list-cont li:hover {
+    border-bottom: var(--med-border-style) rgb(var(--yellow));
+  }
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 5vw;
+    gap: 1rem;
+  }
+  .section-header {
+    border-right: none;
+    border-bottom: var(--med-border-style) var(--dark-blue);
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  #contacts-cont {
+    display: flex;
+    justify-content: center;
+  }
 
+}
+/* ------- Large - Med Mobile ------- */
+@media only screen and (max-width: 511px) {
+  header h1 {
+    font-size: 2.75rem;
+  }
+  .hero-banner {
+    height: 300px;
+    padding-left: 5vw;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-banner div {
+    padding: .5rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  a {
+    font-size: 1.2rem;
+  }
+  .section-header {
+    border-bottom: var(--small-border-style) var(--dark-blue);
+    margin-top: .5rem;
+  }
+  #work-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  #work-main,
+  #work-one,
+  #work-two,
+  #work-three,
+  #work-four {
+    height: 150px;
+  }
+  #contacts-cont {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+  #contacts-cont .list-cont {
+    flex-direction: column;
+    margin: 0 0 0.5rem 0;
+  }
+  #contacts-cont .list-cont li {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    width: min-content;
+  }
+}
+
+/* ------- Small Mobile ------- */
+@media only screen and (max-width: 320px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header nav ul {
+    margin: 0.6rem 5vw 0.5rem 5vw;
+  }
+  header li {
+    margin: 0 0.5rem;
+  }
+  header li {
+    border-bottom: var(--small-border-style) var(--pink);
+  }
+  header li:hover {
+    border-bottom: var(--small-border-style) rgb(var(--yellow));
+  }
+  a {
+    font-size: .9rem;
+  }
+  .hero-banner {
+    height: 200px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  #about-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #avatar {
+    max-width: 270px;
+    max-height: 100%;
+  }
+  .list-cont li {
+    border-bottom: var(--small-border-style) var(--med-blue);
+  }
+  .list-cont li:hover {
+    border-bottom: var(--small-border-style) rgb(var(--yellow));
+  }
+  #work-main,
+  #work-one,
+  #work-two,
+  #work-three,
+  #work-four {
+    height: 125px;
+  }
+} 
