@@ -10,8 +10,9 @@ This is my portfolio website showcasing links to my 5 best personal and group pr
 - The navigation links will take you to the corresponding sections of the website. 
 - The work section contains 5 images that are links to my personal and group projects. Some links will direct you to the corresponding github repo and others to the diployed website. 
 - The contacts section contains further links to both my github and ways of communicating with me. 
+- View my deployed [Portfolio](https://korrin-f.github.io/portfolio/) <- here
 
-
+![portfolio screenshot](assets/images/screenshot.png)
 
 
 ## Credits
